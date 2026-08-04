@@ -220,10 +220,14 @@
   /* ---------- SIZE TIP ---------- */
   .size-tip{ padding: 70px 30px 20px; }
 
+  .size-chart-wrap{
+    display: block;
+    margin: 40px 0 36px;
+  }
   .size-chart{
     width: 100%;
     border-collapse: collapse;
-    margin: 40px 0 4px;
+    margin: 0;
     table-layout: fixed;
   }
   .size-chart th, .size-chart td{
@@ -246,16 +250,6 @@
   }
   .size-chart tr.kr-row th, .size-chart tr.kr-row td{
     padding-top: 12px;
-  }
-  .size-chart .kr-last{
-    white-space: nowrap;
-  }
-  .size-chart .chart-unit{
-    font-family: var(--sans);
-    font-size: 10px;
-    color: #8b887f;
-    margin-left: 2px;
-    font-weight: 400;
   }
 
   .size-list{ list-style:none; padding: 0 0 10px; }
@@ -296,7 +290,7 @@
     position:relative;
   }
   .atelier-list li::before{
-    content:'•';
+    content:'-';
     position:absolute;
     left:0;
     color: var(--mist-deep);
@@ -487,16 +481,18 @@
   <section class="size-tip">
     <div class="section-title reveal" style="font-size:16px;">SIZE TIP</div>
 
-    <table class="size-chart reveal">
-      <tr class="eu-row">
-        <th>EU</th>
-        <td>35</td><td>35.5</td><td>36</td><td>36.5</td><td>37</td><td>37.5</td><td>38</td><td>38.5</td><td>39</td><td>39.5</td><td>40</td>
-      </tr>
-      <tr class="kr-row">
-        <th>KR</th>
-        <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td class="kr-last">270<span class="chart-unit">(mm)</span></td>
-      </tr>
-    </table>
+    <div class="size-chart-wrap reveal">
+      <table class="size-chart">
+        <tr class="eu-row">
+          <th>EU</th>
+          <td>35</td><td>35.5</td><td>36</td><td>36.5</td><td>37</td><td>37.5</td><td>38</td><td>38.5</td><td>39</td><td>39.5</td><td>40</td>
+        </tr>
+        <tr class="kr-row">
+          <th>KR</th>
+          <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td>270</td>
+        </tr>
+      </table>
+    </div>
 
     <ul class="size-list reveal">
       <li>핏감 있는 정사이즈로 제작되었습니다.</li>
