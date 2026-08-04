@@ -1,5 +1,4 @@
-<!-- ===== YATO 상세페이지: 이 파일 전체 복사해서 상품 상세 HTML에 붙여넣기 ===== -->
-<!-- 이미지 src="images/..." 는 쇼핑몰에 업로드한 실제 URL로 바꿔주세요 -->
+<!-- ===== YATO 상세페이지 HTML (이미지 GitHub 주소 포함) — 전체 복사해서 상품 상세에 붙여넣기 ===== -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,28 +40,20 @@
   img{display:block; width:100%; height:auto;}
 
   /* ---------- reveal on scroll ---------- */
-  .reveal{
+  .yato-detail .reveal{
     opacity:0;
     transform: translateY(18px);
     transition: opacity .9s ease, transform .9s ease;
   }
-  .reveal.in{ opacity:1; transform:none; }
+  .yato-detail .reveal.in{ opacity:1; transform:none; }
 
   /* ---------- HERO ---------- */
   .hero{
-    background: var(--stone);
-    padding: 44px 0 0;
+    background: transparent;
+    padding: 0;
     text-align:center;
   }
-  .wordmark{
-    font-family: var(--serif);
-    font-size: 30px;
-    letter-spacing: 14px;
-    font-weight:500;
-    color: var(--ink);
-    padding-bottom: 34px;
-  }
-  .hero-photo{ width:100%; }
+  .hero-photo{ width:100%; display:block; margin:0; }
 
   .quote-block{
     padding: 70px 40px 30px;
@@ -79,7 +70,7 @@
   .divider-img{
     display:block;
     margin: 34px auto;
-    height: 24px;
+    height: 12px;
     width: auto;
   }
 
@@ -99,7 +90,7 @@
     font-weight:600;
     text-align:center;
     color: var(--ink);
-    padding: 0 0 20px;
+    padding: 24px 0 44px;
   }
   .section-title{
     font-family: var(--sans);
@@ -113,7 +104,15 @@
   /* ---------- PRODUCT INTRO ---------- */
   .product-intro{
     background: #F0F1E0;
-    padding: 56px 30px 48px;
+    padding: 0;
+  }
+  .product-opening{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .product-intro-body{
+    padding: 30px 30px 48px;
   }
   .product-headline{
     font-size: 14px;
@@ -148,18 +147,18 @@
     color: #4a4844;
   }
   .feature-photo-wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 100%;
+    text-align: center;
     margin: 8px 0 12px;
   }
   img.feature-photo{
     width: 70%;
     max-width: 70%;
     height: auto;
-    display: block;
-    margin: 0;
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
   }
 
   .lifestyle-photo{ width:100%; }
@@ -248,13 +247,15 @@
   .size-chart tr.kr-row th, .size-chart tr.kr-row td{
     padding-top: 12px;
   }
-  .chart-unit{
+  .size-chart .kr-last{
+    white-space: nowrap;
+  }
+  .size-chart .chart-unit{
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 10px;
     color: #8b887f;
-    text-align: right;
-    padding-right: 2px;
-    margin-bottom: 36px;
+    margin-left: 2px;
+    font-weight: 400;
   }
 
   .size-list{ list-style:none; padding: 0 0 10px; }
@@ -394,13 +395,13 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <img class="hero-photo reveal" src="images/hero_photo.jpg" alt="YATO 발렌타인 플랫슈즈 착용 컷">
+    <img class="hero-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/mainhead.jpg" alt="YATO 발렌타인 플랫슈즈 착용 컷">
   </section>
 
   <div class="quote-block">
     <p class="line1 reveal">Attitude is not explained.</p>
     <p class="line2 reveal">It is revealed.</p>
-    <img class="divider-img reveal" src="images/vector.png" alt="구분선 아이콘">
+    <img class="divider-img reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/vector.png" alt="구분선 아이콘">
     <div class="quote-copy reveal">
       YATO는 자신의 감각을 믿는 여성을 위해 디자인합니다.<br>
       편안함 속에서 흐트러지지 않는 태도.<br>
@@ -410,7 +411,8 @@
 
   <!-- ============ PRODUCT INTRO ============ -->
   <section class="product-intro">
-    <img class="reveal" style="margin:6px 0 30px;" src="images/v_photo0_opening.jpg" alt="발렌타인 플랫슈즈 클로즈업">
+    <img class="product-opening reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_bk1_3_4.jpg" alt="발렌타인 플랫슈즈 클로즈업">
+    <div class="product-intro-body">
     <div class="eyebrow reveal">VALENTINE FLAT SHOES</div>
 
     <p class="product-headline reveal">또렷한 존재감, 부드러움 속의 긴장감</p>
@@ -427,22 +429,23 @@
     </div>
 
     <div class="feature-photo-wrap reveal">
-      <img class="feature-photo" src="images/valentine_onoff.png" alt="발렌타인 플랫슈즈 스트랩 온오프">
+      <img class="feature-photo" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_onoff.png" alt="발렌타인 플랫슈즈 스트랩 온오프">
     </div>
 
     <div class="feature reveal">
       <p class="feature-tag">Versatile Styling</p>
       <p class="feature-copy">탈부착 가능한 스트랩 디테일을 통해 그날의 스타일과 분위기에 따라 다양한 무드로 연출할 수 있습니다. 체인 스트랩, 밍크 스트랩 등 추가 스트랩 액세서리를 통해 다양한 스타일로 변주할 수 있습니다. 하나의 슈즈로 자신만의 감각을 자유롭게 표현해보세요.</p>
     </div>
+    </div>
   </section>
 
-  <img class="lifestyle-photo reveal" src="images/v_photo1_sofa.jpg" alt="소파 위 발렌타인 플랫슈즈 스타일링 컷">
+  <img class="lifestyle-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_style.jpg" alt="소파 위 발렌타인 플랫슈즈 스타일링 컷">
 
   <div class="details-label">
     <div class="section-title reveal" style="font-size:16px;">DETAILS</div>
   </div>
 
-  <img class="detail-photo reveal" src="images/v_photo4_flatlay.jpg" alt="발렌타인 플랫슈즈 플랫레이 디테일">
+  <img class="detail-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_details.jpg" alt="발렌타인 플랫슈즈 플랫레이 디테일">
 
   <!-- ============ VALUE ============ -->
   <section class="value-section">
@@ -451,21 +454,21 @@
     <div class="value-block">
       <p class="value-copy reveal"><strong>좋은 실루엣은 좋은 소재에서 시작됩니다.</strong><br>YATO는 겉감과 안감 모두 엄선된 천연가죽을 사용하며, 소재의 질감과 형태, 착화감까지 고려해 신중하게 선별합니다.</p>
       <div class="value-photo-wrap reveal">
-        <img src="images/b_leather.jpg" alt="이탈리안 킵 레더 소재">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value01_kipleather.jpg" alt="이탈리안 킵 레더 소재">
       </div>
     </div>
 
     <div class="value-block">
       <p class="value-copy reveal"><strong>아름다운 형태는 미세한 차이에서 만들어집니다.</strong><br>YATO는 발의 움직임과 아름다운 비율을 함께 고려하며, 0.1mm의 차이까지 다듬은 시그니처 라스트를 직접 개발합니다.</p>
       <div class="value-photo-wrap reveal">
-        <img src="images/b_last.jpg" alt="YATO 시그니처 라스트">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value02_last.jpg" alt="YATO 시그니처 라스트">
       </div>
     </div>
 
     <div class="value-block">
       <p class="value-copy reveal"><strong>완성도는 장인의 손끝에서 시작됩니다.</strong><br>YATO는 국내 생산을 원칙으로, 성수동 아틀리에의 숙련된 장인이 한 켤레씩 정교한 수제 공정으로 완성합니다. 보이지 않는 디테일까지 고객의 발 형태를 반영한 1:1 커스텀 핏 서비스를 제공합니다.</p>
       <div class="value-photo-wrap reveal">
-        <img src="images/b_hands.jpg" alt="성수동 아틀리에 수제 공정">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value03_kipleather.jpg" alt="성수동 아틀리에 수제 공정">
       </div>
     </div>
   </section>
@@ -491,10 +494,9 @@
       </tr>
       <tr class="kr-row">
         <th>KR</th>
-        <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td>270</td>
+        <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td class="kr-last">270<span class="chart-unit">(mm)</span></td>
       </tr>
     </table>
-    <div class="chart-unit reveal">(mm)</div>
 
     <ul class="size-list reveal">
       <li>핏감 있는 정사이즈로 제작되었습니다.</li>
@@ -571,13 +573,17 @@
   </section>
 
   <footer class="brand-foot">
-    <img class="brand-logo" src="images/yato_logo.png" alt="YATO">
+    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO">
   </footer>
 
 </div>
+</div>
 
 <script>
-  const targets = document.querySelectorAll('.reveal');
+(function(){
+  const root = document.querySelector('.yato-detail');
+  if(!root) return;
+  const targets = root.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
@@ -587,5 +593,5 @@
     });
   }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
   targets.forEach(t=>io.observe(t));
+})();
 </script>
-</div>
