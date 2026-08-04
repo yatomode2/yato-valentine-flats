@@ -1,15 +1,395 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YATO — Valentine Flat Shoes</title>
+<!-- ===== YATO 상세페이지: 이 파일 전체 복사해서 상품 상세 HTML에 붙여넣기 ===== -->
+<!-- 이미지 src="images/..." 는 쇼핑몰에 업로드한 실제 URL로 바꿔주세요 -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+<style>
+:root{
+    --ink:#1c1b19;
+    --stone:#f4f2ec;
+    --sand:#eae4d6;
+    --mist:#aab7bd;
+    --mist-deep:#8b9aa1;
+    --line: rgba(28,27,25,0.12);
+    --white:#ffffff;
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Jost', 'Noto Sans KR', sans-serif;
+    --kr: 'Noto Sans KR', sans-serif;
+  }
+
+  .yato-detail, .yato-detail *{box-sizing:border-box;}
+
+  
+
+  .yato-detail{
+    font-family: var(--kr);
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing:antialiased;
+    text-align: left;
+  }
+
+  .yato-detail .page{
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--white);
+    overflow:hidden;
+  }
+
+  img{display:block; width:100%; height:auto;}
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform: translateY(18px);
+    transition: opacity .9s ease, transform .9s ease;
+  }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background: var(--stone);
+    padding: 44px 0 0;
+    text-align:center;
+  }
+  .wordmark{
+    font-family: var(--serif);
+    font-size: 30px;
+    letter-spacing: 14px;
+    font-weight:500;
+    color: var(--ink);
+    padding-bottom: 34px;
+  }
+  .hero-photo{ width:100%; }
+
+  .quote-block{
+    padding: 70px 40px 30px;
+    text-align:center;
+  }
+  .quote-block .line1, .quote-block .line2{
+    font-family: var(--sans);
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    line-height:1.5;
+    color: var(--ink);
+  }
+  .divider-img{
+    display:block;
+    margin: 34px auto;
+    height: 24px;
+    width: auto;
+  }
+
+  .quote-copy{
+    font-size: 14.5px;
+    line-height: 2;
+    letter-spacing: -0.2px;
+    color: #4a4844;
+    padding-bottom: 60px;
+  }
+
+  /* ---------- SECTION LABEL ---------- */
+  .eyebrow{
+    font-family: var(--sans);
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight:600;
+    text-align:center;
+    color: var(--ink);
+    padding: 0 0 20px;
+  }
+  .section-title{
+    font-family: var(--sans);
+    font-size: 22px;
+    letter-spacing: 8px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  /* ---------- PRODUCT INTRO ---------- */
+  .product-intro{
+    background: #F0F1E0;
+    padding: 56px 30px 48px;
+  }
+  .product-headline{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin: 6px 0 10px;
+  }
+  .product-sub{
+    font-size: 13.5px;
+    color:#57544e;
+    line-height: 1.7;
+    padding-bottom: 34px;
+  }
+
+  .feature{
+    padding: 22px 0;
+  }
+  .feature:first-of-type{ border-top:none; }
+  .feature-tag{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-bottom: 8px;
+  }
+  .feature-tag::before{ content:'# '; color:#8b9aa1; }
+  .feature-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #4a4844;
+  }
+  .feature-photo-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0 12px;
+  }
+  img.feature-photo{
+    width: 70%;
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  .lifestyle-photo{ width:100%; }
+  .detail-photo{ width:100%; }
+
+  .details-label{
+    padding: 54px 0 30px;
+    background: var(--white);
+  }
+
+  /* ---------- VALUE SECTION ---------- */
+  .value-section{ background: var(--white); padding: 70px 30px 10px; }
+  .value-block{ padding-bottom: 54px; }
+  .value-copy{
+    font-size: 14.5px;
+    line-height: 1.85;
+    text-align:left;
+    color: #3a3833;
+    padding-bottom: 26px;
+  }
+  .value-copy strong{
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .value-photo-wrap{
+    position:relative;
+    margin: 0 -30px;
+  }
+  .value-caption{
+    position:absolute;
+    left: 30px;
+    bottom: 26px;
+    color: #f4f2ec;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 12.5px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+  }
+
+  /* ---------- CARE / GUARANTEE ---------- */
+  .care-block{
+    background: #F0F1E0;
+    padding: 46px 30px;
+    text-align:center;
+    margin-top: 10px;
+  }
+  .care-title{
+    font-family:var(--sans);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-bottom: 18px;
+  }
+  .care-copy{ font-size: 13.5px; line-height: 1.8; color:#4a4844; padding-bottom:22px; }
+  .care-sub{ font-family: var(--sans); font-size:13px; font-weight:600; letter-spacing:1px; padding: 14px 0 4px; }
+  .care-sub-copy{ font-size:13px; line-height:1.7; color:#57544e; }
+
+  /* ---------- SIZE TIP ---------- */
+  .size-tip{ padding: 70px 30px 20px; }
+
+  .size-chart{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0 4px;
+    table-layout: fixed;
+  }
+  .size-chart th, .size-chart td{
+    text-align:center;
+    padding: 10px 2px;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--ink);
+  }
+  .size-chart th{
+    font-weight:600;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    width: 36px;
+    white-space: nowrap;
+  }
+  .size-chart tr.eu-row th, .size-chart tr.eu-row td{
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 12px;
+  }
+  .size-chart tr.kr-row th, .size-chart tr.kr-row td{
+    padding-top: 12px;
+  }
+  .chart-unit{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: #8b887f;
+    text-align: right;
+    padding-right: 2px;
+    margin-bottom: 36px;
+  }
+
+  .size-list{ list-style:none; padding: 0 0 10px; }
+  .size-list li{
+    font-size: 13.5px;
+    line-height: 1.9;
+    color:#3a3833;
+    padding-left: 14px;
+    position:relative;
+    margin-bottom: 6px;
+  }
+  .size-list li::before{
+    content:'·';
+    position:absolute;
+    left:0;
+    color: var(--mist-deep);
+    font-weight:700;
+  }
+
+  .atelier-box{
+    background: #F0F1E0;
+    border-radius: 2px;
+    padding: 26px 24px;
+    margin: 34px 0 46px;
+  }
+  .atelier-title{
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight:600;
+    padding-bottom: 14px;
+  }
+  .atelier-list{ list-style:none; }
+  .atelier-list li{
+    font-size: 13.5px;
+    line-height: 1.9;
+    color:#3a3833;
+    padding-left: 14px;
+    position:relative;
+  }
+  .atelier-list li::before{
+    content:'•';
+    position:absolute;
+    left:0;
+    color: var(--mist-deep);
+  }
+
+  .contact-note{
+    text-align:center;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    color: var(--ink);
+    padding-bottom: 22px;
+  }
+
+  .kakao-banner{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap: 6px;
+    background: #F0F1E0;
+    color: var(--ink);
+    font-family: var(--sans);
+    padding: 16px 24px;
+    width: fit-content;
+    max-width: 80%;
+    margin: 0 auto 60px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .kakao-line1{
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    display:flex;
+    gap: 8px;
+  }
+  .kakao-line2{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b6860;
+    letter-spacing: 0.3px;
+  }
+  .kakao-banner .plus{ color: var(--ink); }
+
+
+  /* ---------- POLICY ---------- */
+  .policy{
+    padding: 0 30px 0;
+    border-top: 1px solid var(--line);
+  }
+  .policy-group{ padding-top: 34px; }
+  .policy-heading{
+    font-size: 13.5px;
+    font-weight:600;
+    padding-bottom: 10px;
+  }
+  .policy ul{ list-style:none; }
+  .policy li{
+    font-size: 12.5px;
+    line-height: 1.85;
+    color:#5c5952;
+    padding-left: 12px;
+    position:relative;
+  }
+  .policy li::before{
+    content:'-';
+    position:absolute;
+    left:0;
+    color:#9a968c;
+  }
+
+  footer.brand-foot{
+    text-align:center;
+    padding: 44px 0 56px;
+  }
+  footer.brand-foot .brand-logo{
+    display: block;
+    width: 115px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.7;
+  }
+
+  @media (max-width:400px){
+    .quote-block .line1, .quote-block .line2{ font-size:21px; }
+    .wordmark{ font-size:26px; letter-spacing:11px; }
+  }
+
+</style>
+
+<div class="yato-detail">
 <div class="page">
 
   <!-- ============ HERO ============ -->
@@ -30,8 +410,7 @@
 
   <!-- ============ PRODUCT INTRO ============ -->
   <section class="product-intro">
-    <img class="product-opening reveal" src="images/v_photo0_opening.jpg" alt="발렌타인 플랫슈즈 클로즈업">
-    <div class="product-intro-body">
+    <img class="reveal" style="margin:6px 0 30px;" src="images/v_photo0_opening.jpg" alt="발렌타인 플랫슈즈 클로즈업">
     <div class="eyebrow reveal">VALENTINE FLAT SHOES</div>
 
     <p class="product-headline reveal">또렷한 존재감, 부드러움 속의 긴장감</p>
@@ -54,7 +433,6 @@
     <div class="feature reveal">
       <p class="feature-tag">Versatile Styling</p>
       <p class="feature-copy">탈부착 가능한 스트랩 디테일을 통해 그날의 스타일과 분위기에 따라 다양한 무드로 연출할 수 있습니다. 체인 스트랩, 밍크 스트랩 등 추가 스트랩 액세서리를 통해 다양한 스타일로 변주할 수 있습니다. 하나의 슈즈로 자신만의 감각을 자유롭게 표현해보세요.</p>
-    </div>
     </div>
   </section>
 
@@ -113,9 +491,10 @@
       </tr>
       <tr class="kr-row">
         <th>KR</th>
-        <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td class="kr-last">270<span class="chart-unit">(mm)</span></td>
+        <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td>270</td>
       </tr>
     </table>
+    <div class="chart-unit reveal">(mm)</div>
 
     <ul class="size-list reveal">
       <li>핏감 있는 정사이즈로 제작되었습니다.</li>
@@ -209,5 +588,4 @@
   }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
   targets.forEach(t=>io.observe(t));
 </script>
-</body>
-</html>
+</div>
