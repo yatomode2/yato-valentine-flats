@@ -66,12 +66,25 @@
     font-style: normal;
     line-height:1.5;
     color: var(--ink);
+    margin: 0;
   }
+  .divider-wrap{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 34px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img.divider-img,
   .divider-img{
-    display:block;
-    margin: 34px auto;
-    height: 12px;
-    width: auto;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 12px !important;
+    width: auto !important;
+    max-width: 40px !important;
+    vertical-align: middle;
   }
 
   .quote-copy{
@@ -79,7 +92,9 @@
     line-height: 2;
     letter-spacing: -0.2px;
     color: #4a4844;
+    padding-top: 0;
     padding-bottom: 60px;
+    margin: 0;
   }
 
   /* ---------- SECTION LABEL ---------- */
@@ -274,26 +289,28 @@
     border-radius: 2px;
     padding: 26px 24px;
     margin: 34px 0 46px;
+    text-align: left;
   }
   .atelier-title{
     font-family: var(--sans);
     font-size: 13.5px;
     font-weight:600;
     padding-bottom: 14px;
+    text-align: left;
   }
-  .atelier-list{ list-style:none; }
+  .atelier-list{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
   .atelier-list li{
     font-size: 13.5px;
     line-height: 1.9;
     color:#3a3833;
-    padding-left: 14px;
-    position:relative;
-  }
-  .atelier-list li::before{
-    content:'-';
-    position:absolute;
-    left:0;
-    color: var(--mist-deep);
+    padding-left: 0;
+    position: relative;
+    text-align: left;
   }
 
   .contact-note{
@@ -382,6 +399,21 @@
     .wordmark{ font-size:26px; letter-spacing:11px; }
   }
 
+  .yato-detail .divider-wrap{
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 34px 0 !important;
+    margin: 0 !important;
+  }
+  .yato-detail img.divider-img{
+    display: inline-block !important;
+    margin: 0 auto !important;
+    height: 12px !important;
+    width: auto !important;
+    max-width: 40px !important;
+  }
+
 </style>
 
 <div class="yato-detail">
@@ -395,7 +427,9 @@
   <div class="quote-block">
     <p class="line1 reveal">Attitude is not explained.</p>
     <p class="line2 reveal">It is revealed.</p>
-    <img class="divider-img reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/vector.png" alt="구분선 아이콘">
+    <div class="divider-wrap reveal">
+      <img class="divider-img" src="https://yatomode2.github.io/yato-valentine-flats/images/vector.png" alt="구분선 아이콘">
+    </div>
     <div class="quote-copy reveal">
       YATO는 자신의 감각을 믿는 여성을 위해 디자인합니다.<br>
       편안함 속에서 흐트러지지 않는 태도.<br>
@@ -504,10 +538,10 @@
     <div class="atelier-box reveal">
       <p class="atelier-title">1:1 YATO Atelier Custom-Fit Care</p>
       <ul class="atelier-list">
-        <li>발볼 넓힘 / 발볼 많이 넓힘</li>
-        <li>발등 높임</li>
-        <li>양발 미세 사이즈 차이 보정<br>(ex. Left 235 / Right 240)</li>
-        <li>높은 아치 보정 쿠션 추가<br>(Special Option +30,000원, 별도안내예정)</li>
+        <li>- 발볼 넓힘 / 발볼 많이 넓힘</li>
+        <li>- 발등 높임</li>
+        <li>- 양발 미세 사이즈 차이 보정<br>&nbsp;&nbsp;(ex. Left 235 / Right 240)</li>
+        <li>- 높은 아치 보정 쿠션 추가<br>&nbsp;&nbsp;(Special Option +30,000원, 별도안내예정)</li>
       </ul>
     </div>
 

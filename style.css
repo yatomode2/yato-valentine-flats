@@ -58,12 +58,25 @@
     font-style: normal;
     line-height:1.5;
     color: var(--ink);
+    margin: 0;
   }
+  .divider-wrap{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 34px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img.divider-img,
   .divider-img{
-    display:block;
-    margin: 34px auto;
-    height: 12px;
-    width: auto;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 12px !important;
+    width: auto !important;
+    max-width: 40px !important;
+    vertical-align: middle;
   }
 
   .quote-copy{
@@ -71,7 +84,9 @@
     line-height: 2;
     letter-spacing: -0.2px;
     color: #4a4844;
+    padding-top: 0;
     padding-bottom: 60px;
+    margin: 0;
   }
 
   /* ---------- SECTION LABEL ---------- */
@@ -266,26 +281,28 @@
     border-radius: 2px;
     padding: 26px 24px;
     margin: 34px 0 46px;
+    text-align: left;
   }
   .atelier-title{
     font-family: var(--sans);
     font-size: 13.5px;
     font-weight:600;
     padding-bottom: 14px;
+    text-align: left;
   }
-  .atelier-list{ list-style:none; }
+  .atelier-list{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
   .atelier-list li{
     font-size: 13.5px;
     line-height: 1.9;
     color:#3a3833;
-    padding-left: 14px;
-    position:relative;
-  }
-  .atelier-list li::before{
-    content:'-';
-    position:absolute;
-    left:0;
-    color: var(--mist-deep);
+    padding-left: 0;
+    position: relative;
+    text-align: left;
   }
 
   .contact-note{
