@@ -29,7 +29,7 @@
     overflow:hidden;
   }
 
-  .yato-detail  img{display:block; width:100%; height:auto;}
+  .page img{display:block; width:100%; height:auto;}
 
   /* ---------- reveal on scroll ---------- */
   .reveal{
@@ -167,6 +167,32 @@
     margin: 0 auto;
     vertical-align: middle;
   }
+  .designed-for{
+    text-align: center;
+    background: var(--white);
+    padding: 40px 30px 48px;
+  }
+  .designed-for-inner{
+    display: inline-block;
+    text-align: left;
+  }
+  .designed-for-title{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .designed-for-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.9;
+    color: #4a4844;
+    text-align: left;
+  }
 
   .lifestyle-photo{ width:100%; }
   .detail-photo{ width:100%; }
@@ -174,6 +200,38 @@
   .details-label{
     padding: 54px 0 30px;
     background: var(--white);
+  }
+  .image-note{
+    padding: 18px 30px 36px;
+    background: var(--white);
+    font-size: 12px;
+    line-height: 1.85;
+    color: #6a6863;
+  }
+  .option-block{
+    padding: 8px 30px 22px;
+    background: var(--white);
+  }
+  .option-block-01{
+    padding-top: 13px;
+  }
+  .option-block-02{
+    padding-top: 43px;
+    padding-bottom: 37px;
+  }
+  .option-title{
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--ink);
+    padding-bottom: 12px;
+  }
+  .option-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #4a4844;
   }
 
   /* ---------- VALUE SECTION ---------- */
@@ -193,6 +251,11 @@
   .value-photo-wrap{
     position:relative;
     margin: 0 -30px;
+  }
+  .value-photo-wrap img{
+    display:block;
+    width:100%;
+    height:auto;
   }
   .value-caption{
     position:absolute;
