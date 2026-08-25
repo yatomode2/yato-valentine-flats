@@ -1,0 +1,716 @@
+<!-- ===== YATO 상세페이지 HTML (이미지 GitHub 주소 포함) — 전체 복사해서 상품 상세에 붙여넣기 ===== -->
+<meta charset="UTF-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+<style>
+:root{
+    --ink:#1c1b19;
+    --stone:#f4f2ec;
+    --sand:#eae4d6;
+    --mist:#aab7bd;
+    --mist-deep:#8b9aa1;
+    --line: rgba(28,27,25,0.12);
+    --white:#ffffff;
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Jost', 'Noto Sans KR', sans-serif;
+    --kr: 'Noto Sans KR', sans-serif;
+  }
+
+  /* Standalone preview only (GitHub Pages / local). Does not apply when pasted into a mall page. */
+  html:has(> body > .yato-detail),
+  html:has(> body > .yato-detail) body{
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color-scheme: light;
+  }
+
+  .yato-detail, .yato-detail *{box-sizing:border-box;}
+
+  
+
+  .yato-detail{
+    font-family: var(--kr);
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing:antialiased;
+    text-align: left;
+  }
+
+  .yato-detail .page{
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--white);
+    overflow:hidden;
+  }
+
+  .yato-detail  img{display:block; width:100%; height:auto;}
+
+  /* ---------- reveal on scroll ---------- */
+  .yato-detail .reveal{
+    opacity:0;
+    transform: translateY(18px);
+    transition: opacity .9s ease, transform .9s ease;
+  }
+  .yato-detail .reveal.in{ opacity:1; transform:none; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background: transparent;
+    padding: 0;
+    text-align:center;
+  }
+  .hero-photo{ width:100%; display:block; margin:0; }
+
+  .quote-block{
+    padding: 70px 40px 30px;
+    text-align:center;
+  }
+  .quote-block .line1, .quote-block .line2{
+    font-family: var(--sans);
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    line-height:1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .divider-wrap{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 34px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img.divider-img,
+  .divider-img{
+    display: inline-block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 12px !important;
+    width: auto !important;
+    max-width: 40px !important;
+    vertical-align: middle;
+  }
+
+  .quote-copy{
+    font-size: 14.5px;
+    line-height: 2;
+    letter-spacing: -0.2px;
+    color: #4a4844;
+    padding-top: 0;
+    padding-bottom: 60px;
+    margin: 0;
+  }
+
+  /* ---------- SECTION LABEL ---------- */
+  .eyebrow{
+    font-family: var(--sans);
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight:600;
+    text-align:center;
+    color: var(--ink);
+    padding: 24px 0 44px;
+  }
+  .section-title{
+    font-family: var(--sans);
+    font-size: 22px;
+    letter-spacing: 8px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  /* ---------- PRODUCT INTRO ---------- */
+  .product-intro{
+    background: #F0F1E0;
+    padding: 0;
+  }
+  .product-opening{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .product-intro-body{
+    padding: 30px 30px 48px;
+  }
+  .product-headline{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin: 6px 0 10px;
+  }
+  .product-sub{
+    font-size: 13.5px;
+    color:#57544e;
+    line-height: 1.7;
+    padding-bottom: 34px;
+  }
+
+  .feature{
+    padding: 22px 0;
+  }
+  .feature:first-of-type{ border-top:none; }
+  .feature-tag{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-bottom: 8px;
+  }
+  .feature-tag::before{ content:'# '; color:#8b9aa1; }
+  .feature-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #4a4844;
+  }
+  .feature-copy + .feature-copy{
+    padding-top: 14px;
+  }
+  .designed-for{
+    text-align: center;
+    background: var(--white);
+    padding: 40px 30px 48px;
+  }
+  .designed-for-inner{
+    display: inline-block;
+    text-align: left;
+  }
+  .designed-for-title{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .designed-for-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #4a4844;
+    text-align: left;
+  }
+  .styling-tip-title{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-top: 40px;
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .styling-tip-quote{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #4a4844;
+    padding-bottom: 16px;
+    text-align: left;
+  }
+  .styling-tip-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.85;
+    color: #4a4844;
+    padding: 0 0 14px 12px;
+    position: relative;
+    text-align: left;
+  }
+  .styling-tip-copy::before{
+    content:'\2022';
+    position:absolute;
+    left:0;
+    color: var(--ink);
+  }
+  .styling-tip-label{
+    font-weight: 600;
+  }
+  .lifestyle-photo{ width:100%; }
+  .detail-photo{ width:100%; }
+
+  .details-label{
+    padding: 54px 0 30px;
+    background: var(--white);
+  }
+
+  /* ---------- VALUE SECTION ---------- */
+  .value-section{ background: var(--white); padding: 70px 30px 10px; }
+  .value-block{ padding-bottom: 54px; }
+  .value-copy{
+    font-size: 14.5px;
+    line-height: 1.85;
+    text-align:left;
+    color: #3a3833;
+    padding-bottom: 26px;
+  }
+  .value-copy strong{
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .value-photo-wrap{
+    position:relative;
+    margin: 0 -30px;
+  }
+  .value-caption{
+    position:absolute;
+    left: 30px;
+    bottom: 26px;
+    color: #f4f2ec;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 12.5px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+  }
+
+  /* ---------- CARE / GUARANTEE ---------- */
+  .care-block{
+    background: #F0F1E0;
+    padding: 46px 30px;
+    text-align:center;
+    margin-top: 10px;
+  }
+  .care-title{
+    font-family:var(--sans);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-bottom: 18px;
+  }
+  .care-copy{ font-size: 13.5px; line-height: 1.8; color:#4a4844; padding-bottom:22px; }
+  .care-sub{ font-family: var(--sans); font-size:13px; font-weight:600; letter-spacing:1px; padding: 14px 0 4px; }
+  .care-sub-copy{ font-size:13px; line-height:1.7; color:#57544e; }
+
+  /* ---------- SIZE TIP ---------- */
+  .size-tip{ padding: 70px 30px 20px; }
+
+  .size-chart-wrap{
+    display: block;
+    margin: 40px 0 36px;
+  }
+  .size-chart{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    table-layout: fixed;
+  }
+  .size-chart th, .size-chart td{
+    text-align:center;
+    padding: 10px 2px;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--ink);
+  }
+  .size-chart th{
+    font-weight:600;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    width: 36px;
+    white-space: nowrap;
+  }
+  .size-chart tr.eu-row th, .size-chart tr.eu-row td{
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 12px;
+  }
+  .size-chart tr.kr-row th, .size-chart tr.kr-row td{
+    padding-top: 12px;
+  }
+
+  .size-list{ list-style:none; padding: 0 0 10px; }
+  .size-list li{
+    font-size: 13.5px;
+    line-height: 1.9;
+    color:#3a3833;
+    padding-left: 14px;
+    position:relative;
+    margin-bottom: 6px;
+  }
+  .size-list li::before{
+    content:'\00B7';
+    position:absolute;
+    left:0;
+    color: var(--mist-deep);
+    font-weight:700;
+  }
+
+  .atelier-box{
+    background: #F0F1E0;
+    border-radius: 2px;
+    padding: 26px 24px;
+    margin: 34px 0 46px;
+    text-align: left;
+  }
+  .atelier-title{
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight:600;
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .atelier-list{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  .atelier-list li{
+    font-size: 13.5px;
+    line-height: 1.9;
+    color:#3a3833;
+    padding-left: 0;
+    position: relative;
+    text-align: left;
+  }
+
+  .contact-note{
+    text-align:center;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    color: var(--ink);
+    padding-bottom: 22px;
+  }
+
+  .kakao-banner{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap: 6px;
+    background: #F0F1E0;
+    color: var(--ink);
+    font-family: var(--sans);
+    padding: 16px 24px;
+    width: fit-content;
+    max-width: 80%;
+    margin: 0 auto 60px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .kakao-line1{
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    display:flex;
+    gap: 8px;
+  }
+  .kakao-line2{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b6860;
+    letter-spacing: 0.3px;
+  }
+  .kakao-banner .plus{ color: var(--ink); }
+
+
+  /* ---------- POLICY ---------- */
+  .policy{
+    padding: 0 30px 0;
+    border-top: 1px solid var(--line);
+  }
+  .policy-group{ padding-top: 34px; }
+  .policy-heading{
+    font-size: 13.5px;
+    font-weight:600;
+    padding-bottom: 10px;
+  }
+  .policy ul{ list-style:none; }
+  .policy li{
+    font-size: 12.5px;
+    line-height: 1.85;
+    color:#5c5952;
+    padding-left: 12px;
+    position:relative;
+  }
+  .policy li::before{
+    content:'-';
+    position:absolute;
+    left:0;
+    color:#9a968c;
+  }
+
+  footer.brand-foot{
+    text-align:center;
+    padding: 44px 0 56px;
+  }
+  footer.brand-foot .brand-logo{
+    display: block;
+    width: 115px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.7;
+  }
+
+  @media (max-width:400px){
+    .quote-block .line1, .quote-block .line2{ font-size:21px; }
+    .wordmark{ font-size:26px; letter-spacing:11px; }
+  }
+
+  .yato-detail .divider-wrap{
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 34px 0 !important;
+    margin: 0 !important;
+  }
+  .yato-detail img.divider-img{
+    display: inline-block !important;
+    margin: 0 auto !important;
+    height: 12px !important;
+    width: auto !important;
+    max-width: 40px !important;
+  }
+
+</style>
+
+<div class="yato-detail">
+<div class="page">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <img class="hero-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/mainhead.jpg" alt="YATO 발렌타인 플랫슈즈 착용 컷">
+  </section>
+
+  <div class="quote-block">
+    <p class="line1 reveal">Attitude is not explained.</p>
+    <p class="line2 reveal">It is revealed.</p>
+    <div class="divider-wrap reveal">
+      <img class="divider-img" src="https://yatomode2.github.io/yato-valentine-flats/images/vector.png" alt="구분선 아이콘">
+    </div>
+    <div class="quote-copy reveal">
+      YATO는 자신의 감각을 믿는 여성을 위해 디자인합니다.<br>
+      편안함 속에서 흐트러지지 않는 태도.<br>
+      정제된 실루엣으로 나다움을 완성합니다.
+    </div>
+  </div>
+
+  <!-- ============ PRODUCT INTRO ============ -->
+  <section class="product-intro">
+    <img class="product-opening reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/arinx_bk_main1.jpg" alt="아린 X 블랙 플랫슈즈 착용 컷">
+    <div class="product-intro-body">
+    <div class="eyebrow reveal">ARIN X FLAT SHOES</div>
+
+    <p class="product-headline reveal">어떤 순간에도 지켜내는 나만의 여성스러움</p>
+    <p class="product-sub reveal">메리제인을 섬세하게 재해석한 아린 X 플랫</p>
+
+    <div class="feature reveal">
+      <p class="feature-tag">Slim Silhouette</p>
+      <p class="feature-copy">부드러운 라운드 코, 중앙선, 스티치 디테일, 그리고 발등을 슬림하게 감싸주는 은은한 V 쉐이프는 은은하게 나의 여성스러움을 돋보여줍니다.</p>
+    </div>
+
+    <div class="feature reveal">
+      <p class="feature-tag">Feminine Tension - X detail</p>
+      <p class="feature-copy">가느다란 스트랩이 만들어내는 절제된 여성스러움.<br>부드러운 라운드 토와 섬세하게 교차하는 X 스트랩.</p>
+      <p class="feature-copy">서로 다른 두 개의 선이 만나<br>사랑스러움과 긴장감이 공존하는<br>ARIN X만의 균형 잡힌 실루엣을 만들어냅니다.</p>
+      <p class="feature-copy">화려하게 꾸미지 않아도 충분히 여성스럽고,<br>편안하게 신어도 흐트러지지 않는 스타일.</p>
+      <p class="feature-copy">ARIN X는 소녀다운 감성을<br>지금의 나에게 가장 자연스러운 방식으로 표현합니다.</p>
+    </div>
+
+    <div class="feature reveal">
+      <p class="feature-tag">Hidden Comfort</p>
+      <p class="feature-copy">보이지 않는 지지력 겉으로는 모던한 일자 플랫의 형태를 유지하면서 내부에는 야토만의 미세한 히든 힐과 고밀도 쿠셔닝이 숨겨져 있습니다. 오랜시간 걸음에도 피로감을 줄이고, 모던한 감각을 보여줍니다.</p>
+    </div>
+    </div>
+  </section>
+
+  <img class="lifestyle-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/arinx_black_style.jpg" alt="아린 X 블랙 플랫슈즈 스타일링 컷">
+
+  <div class="designed-for reveal">
+    <div class="designed-for-inner">
+      <p class="designed-for-title">DESIGNED FOR</p>
+      <p class="designed-for-copy">
+        일상에서 여성스럽고 섬세한 실루엣을 놓치고 싶지 않은 분<br>
+        평범한 룩에 한 끗의 '로맨틱한 변주'를 주고 싶은 특별한 날<br>
+        꾸민듯 안꾸민듯 자연스러운 여성미를 보여주고싶은 분<br>
+        사랑스러움과 성숙함이 자연스럽게 공존하는 슈즈를 찾는 분<br>
+        한 끗의 '로맨틱한 변주'를 주고 싶은 특별한 데이트룩
+      </p>
+      <p class="styling-tip-title">STYLING TIP: Romantic Mix &amp; Match</p>
+      <p class="styling-tip-quote">"사랑스럽지만 유치하지 않게"</p>
+      <p class="styling-tip-copy"><span class="styling-tip-label">[Tip 1. Parisian Chic]</span> 무심하게 툭 떨어진 가벼운 소재의 와이드 팬츠 밑단 아래로 메리제인의 앞코와 스트랩이 살짝 보이게 연출해 보세요. 프랑스 여인들이 즐겨 입는 '에포트리스 로맨틱' 룩이 완성됩니다.</p>
+      <p class="styling-tip-copy"><span class="styling-tip-label">[Tip 2. Playful Feminine]</span> 플레어 스커트와 시스루 양말을 매치하면 여성스러우면서도 매력적인 분위기를 자아냅니다.</p>
+    </div>
+  </div>
+
+  <div class="details-label">
+    <div class="section-title reveal" style="font-size:16px;">DETAILS</div>
+  </div>
+
+  <img class="detail-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/arin_x_black_details.jpg" alt="아린 X 블랙 플랫슈즈 디테일">
+
+  <!-- ============ VALUE ============ -->
+  <section class="value-section">
+    <div class="section-title reveal" style="padding-bottom:40px; font-size:16px;">VALUE</div>
+
+    <div class="value-block">
+      <p class="value-copy reveal"><strong>좋은 실루엣은 좋은 소재에서 시작됩니다.</strong><br>YATO는 겉감과 안감 모두 엄선된 천연가죽을 사용하며, 소재의 질감과 형태, 착화감까지 고려해 신중하게 선별합니다.</p>
+      <div class="value-photo-wrap reveal">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value01_lambskin.jpg" alt="램스킨 소재">
+      </div>
+    </div>
+
+    <div class="value-block">
+      <p class="value-copy reveal"><strong>아름다운 형태는 미세한 차이에서 만들어집니다.</strong><br>YATO는 발의 움직임과 아름다운 비율을 함께 고려하며, 0.1mm의 차이까지 다듬은 시그니처 라스트를 직접 개발합니다.</p>
+      <div class="value-photo-wrap reveal">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value02_last.jpg" alt="YATO 시그니처 라스트">
+      </div>
+    </div>
+
+    <div class="value-block">
+      <p class="value-copy reveal"><strong>완성도는 장인의 손끝에서 시작됩니다.</strong><br>YATO는 국내 생산을 원칙으로, 성수동 아틀리에의 숙련된 장인이 한 켤레씩 정교한 수제 공정으로 완성합니다. 보이지 않는 디테일까지 고객의 발 형태를 반영한 1:1 커스텀 핏 서비스를 제공합니다.</p>
+      <div class="value-photo-wrap reveal">
+        <img src="https://yatomode2.github.io/yato-valentine-flats/images/value03_kipleather.jpg" alt="성수동 아틀리에 수제 공정">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARE / GUARANTEE ============ -->
+  <div class="care-block reveal">
+    <p class="care-title">YATO GUARANTEE &amp; CARE SERVICE</p>
+    <p class="care-copy">오랫동안 아름다운 실루엣을 유지하기 위한 케어 서비스를 제공합니다.</p>
+    <p class="care-sub">One Year Warranty</p>
+    <p class="care-sub-copy">구매일로부터 1년 무상 A/S 지원</p>
+    <p class="care-sub">Silhouette Refresh</p>
+    <p class="care-sub-copy">착화로 변형된 실루엣을 되살리는 1회 무료 실루엣 복원 서비스</p>
+  </div>
+
+  <!-- ============ SIZE TIP ============ -->
+  <section class="size-tip">
+    <div class="section-title reveal" style="font-size:16px;">SIZE TIP</div>
+
+    <div class="size-chart-wrap reveal">
+      <table class="size-chart">
+        <tr class="eu-row">
+          <th>EU</th>
+          <td>35</td><td>35.5</td><td>36</td><td>36.5</td><td>37</td><td>37.5</td><td>38</td><td>38.5</td><td>39</td><td>39.5</td><td>40</td>
+        </tr>
+        <tr class="kr-row">
+          <th>KR</th>
+          <td>220</td><td>225</td><td>230</td><td>235</td><td>240</td><td>245</td><td>250</td><td>255</td><td>260</td><td>265</td><td>270</td>
+        </tr>
+      </table>
+    </div>
+
+    <ul class="size-list reveal">
+      <li>핏감 있는 정사이즈로 제작되었습니다.</li>
+      <li>사이즈가 애매한 경우 한 사이즈 크게 선택해 주세요.<br>ex) 235~240 → 240추천</li>
+      <li>양말과 함께 착용하실 경우 한 사이즈 크게 추천드립니다.</li>
+      <li>정사이즈 외에 특별한 요청이 있는 경우 1:1 커스텀 핏 케어로 제작해드립니다. 원하는 옵션을 배송 커멘트 칸에 기입해주세요.<br>(제작 기간: 영업일 기준 7~14일, 교환 1회가능, 환불 불가)</li>
+    </ul>
+
+    <div class="atelier-box reveal">
+      <p class="atelier-title">1:1 YATO Atelier Custom-Fit Care</p>
+      <ul class="atelier-list">
+        <li>- 발볼 넓힘 / 발볼 많이 넓힘</li>
+        <li>- 발등 높임</li>
+        <li>- 양발 미세 사이즈 차이 보정<br>&nbsp;&nbsp;(ex. Left 235 / Right 240)</li>
+        <li>- 높은 아치 보정 쿠션 추가<br>&nbsp;&nbsp;(Special Option +30,000원, 별도안내예정)</li>
+      </ul>
+    </div>
+
+    <p class="contact-note reveal">INQUIRY</p>
+    <a class="kakao-banner reveal" href="https://yatomode.com/contact">
+      <span class="kakao-line1"><span>KAKAO CHANNEL</span><span class="plus">+</span><span>@yatomode</span></span>
+      <span class="kakao-line2">지금 문의하러가기</span>
+    </a>
+  </section>
+
+  <!-- ============ POLICY ============ -->
+  <section class="policy">
+
+    <div class="policy-group reveal">
+      <p class="policy-heading">상품 안내</p>
+      <ul>
+        <li>일반 주문시 영업일기준으로 주문접수이후 배송 까지 2-14일 소요됨을 미리 안내드립니다. 당일 주문량이 많아 배송이 지연되는 경우 별도 안내드립니다. 사이즈 교환은 1회 가능합니다.</li>
+        <li>35(220mm) ~ 35.5(225mm), 39(260mm) ~ 40(270mm) 특별사이즈 주문과 일대일 커스텀 핏 주문 제작은 주문일로부터 영업일기준 7-14일 소요되며, 교환, 환불이 불가합니다.</li>
+      </ul>
+    </div>
+
+    <div class="policy-group reveal">
+      <p class="policy-heading">배송 안내</p>
+      <ul>
+        <li>배송 지역 | 대한민국 전지역</li>
+        <li>배송비 | 무료</li>
+        <li>배송기간 | 주말 공휴일 제외 2~14일 (모든 배송은 택배사 사정으로 지연될 수 있습니다.)</li>
+      </ul>
+    </div>
+
+    <div class="policy-group reveal">
+      <p class="policy-heading">교환 및 반품 안내</p>
+      <ul>
+        <li>고객 변심으로 인한 교환/반품은 상품 수령 후 7일 이내 가능합니다.</li>
+        <li>반품 및 교환 문의는 자사몰 혹은 카카오채널 @yatomode로 가능합니다.</li>
+        <li>고객 귀책 사유로 인한 반품의 경우 왕복 택배비 7,000원은 고객님 부담입니다.</li>
+        <li>반품 접수가 완료되면 구매금액에서 택배비 차감하여 환불진행합니다.</li>
+        <li>환불기한은 카드사 정책에 따르며, 무통장 입금은 영업일 기준 3일 이내 입금드립니다.</li>
+        <li>반품접수 기한이 지난 경우, 제품 및 패키지 훼손, 사용 흔적이 있는 제품은 교환/반품이 불가합니다.</li>
+        <li>반품접수는 반품제품이 다시 판매가능한 상태의 제품인경우에만 환불 가능한점 안내드립니다.</li>
+      </ul>
+    </div>
+
+    <div class="policy-group reveal">
+      <p class="policy-heading">사이즈 교환 안내</p>
+      <ul>
+        <li>제품 교환은 신규 주문 접수가 들어가므로 주문일로 부터 영업일기준 7-14일 소요됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="policy-group reveal">
+      <p class="policy-heading">제품 하자로 인한 교환 및 반품 안내</p>
+      <ul>
+        <li>제품 하자 접수 건은 본사 수거 후 전문 검수팀의 절차를 거치게 됩니다.</li>
+        <li>검수 결과 제품 하자로 최종 판정될 경우, 교환 및 반품에 따른 왕복 택배비는 본사에서 전액 부담합니다.</li>
+      </ul>
+      <p class="policy-heading" style="padding-top:18px;">천연가죽 및 수제화 특성에 따른 유의사항 (불량 사유 제외)</p>
+      <ul>
+        <li>아래 항목은 천연가죽 및 핸드메이드 수공 제작 과정에서 발생하는 자연스러운 현상으로, 제품 자체의 하자에 해당하지 않으니 구매 및 교환/반품 신청 시 참고해 주시기 바랍니다.</li>
+        <li><strong>천연가죽 소재 특성</strong><br>
+          YATO의 모든 슈즈는 외피와 내피에 모두 100% 천연가죽(양가죽 등)을 사용합니다.<br>
+          천연가죽의 특성상 가죽 표면의 힘줄, 미세한 스크래치, 부위별 결 및 톤 차이가 존재할 수 있습니다.<br>
+          천연 염료 착색 특성상 땀이나 습기, 마찰에 의해 착색 및 이염이 발생할 수 있습니다.</li>
+        <li><strong>수공 제작(Handmade) 특성</strong><br>
+          수작업으로 제작되는 특성상 작업 과정 중 발생하는 미세한 마감 차이나 미세 스크래치가 있을 수 있습니다.<br>
+          모든 제품은 본사의 엄격한 품질 가이드라인에 따라 전수 검수를 마친 정품만 출고됩니다.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer class="brand-foot">
+    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO">
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  const root = document.querySelector('.yato-detail');
+  if(!root) return;
+  const targets = root.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(t=>io.observe(t));
+})();
+</script>
