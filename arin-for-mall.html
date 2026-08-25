@@ -162,6 +162,9 @@
     line-height: 1.85;
     color: #4a4844;
   }
+  .feature-copy + .feature-copy{
+    padding-top: 14px;
+  }
   .designed-for{
     text-align: center;
     background: var(--white);
@@ -183,10 +186,39 @@
   .designed-for-copy{
     font-family: 'Pretendard', var(--kr);
     font-size: 13.5px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.9;
     color: #4a4844;
     text-align: left;
+  }
+  .styling-tip-title{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    padding-top: 40px;
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .styling-tip-copy{
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.85;
+    color: #4a4844;
+    padding: 0 0 14px 12px;
+    position: relative;
+    text-align: left;
+  }
+  .styling-tip-copy::before{
+    content:'•';
+    position:absolute;
+    left:0;
+    color: var(--ink);
+  }
+  .styling-tip-label{
+    font-weight: 600;
   }
   .lifestyle-photo{ width:100%; }
   .detail-photo{ width:100%; }
@@ -453,41 +485,53 @@
   <section class="product-intro">
     <img class="product-opening reveal" src="images/arin_bk_main1.jpg" alt="아린 블랙 플랫슈즈 착용 컷">
     <div class="product-intro-body">
-    <div class="eyebrow reveal">VALENTINE FLAT SHOES</div>
+    <div class="eyebrow reveal">ARIN MARY JANE SHOES</div>
 
-    <p class="product-headline reveal">또렷한 존재감, 부드러움 속의 긴장감</p>
-    <p class="product-sub reveal">클래식한 디자인의 포인트토 슬링백 발렌타인 플랫슈즈</p>
+    <p class="product-headline reveal">어떠한 순간에도, 나다움을 잃지 않는 우아함</p>
+    <p class="product-sub reveal">클래식한 디자인을 현대적으로 재해석한 야토의 메리제인 아린 플랫슈즈</p>
 
     <div class="feature reveal">
-      <p class="feature-tag">Slim Silhouette</p>
-      <p class="feature-copy">슬림한 앞코라인과 깊게 파인 V라인 컷팅은 발과 다리 라인을 더욱 길고 슬림하게 보이게 합니다. 낮은 굽에서도 세련된 긴장감을 완성하며 하이힐을 신은 듯 당당한 실루엣을 선사합니다.</p>
+      <p class="feature-tag">History of Maryjane</p>
+      <p class="feature-copy">메리제인은 1960년대 패션 아이콘 '트위기'에 의해 성인 여성들을 위한 가장 사랑스러운 슈즈로 시대를 관통하는 '정제된 소녀다움'을 상징하는 아이콘이 되었습니다.</p>
+      <p class="feature-copy">YATO의 메리제인 ARIN은 소녀다움을 상징하는 메리제인을 좀더 웨어러블하고 모던하며, 성숙한 여자 어른을 위한 슈즈로 재탄생 시켰습니다.</p>
+    </div>
+
+    <div class="feature reveal">
+      <p class="feature-tag">Structural Support</p>
+      <p class="feature-copy">입체적인 Y 디테일은 발의 실루엣을 가장 슬림하게 잡아주는 시각적 장치가 됩니다.</p>
+      <p class="feature-copy">보폭이 넓고 활동량이 많은 직장인 여성의 움직임을 고려하여 설계된 Y디테일과 안과 밖을 교차하는 스트랩은, 발등을 가장 안정적으로 지지하는 동시에 발의 실루엣을 가장 슬림하게 잡아주는 시각적 장치가 됩니다.</p>
+      <p class="feature-copy">발등을 가장 안정적으로 지지하는 동시에 발의 실루엣을 가장 슬림하게 잡아주는 시각적 장치가 됩니다.</p>
     </div>
 
     <div class="feature reveal">
       <p class="feature-tag">Feminine Tension</p>
-      <p class="feature-copy">기본 제공되는 얇은 스트랩을 더하면 발등을 안정감 있게 감싸며 한층 더 여성스럽고 섬세한 무드로 전환됩니다.</p>
+      <p class="feature-copy">15mm의 정교한 스트랩 폭은 과하지 않은 절제미로 어떤 비즈니스 룩에도 단정한 인상을 완성합니다.</p>
     </div>
 
     <div class="feature reveal">
-      <p class="feature-tag">Versatile Styling</p>
-      <p class="feature-copy">탈부착 가능한 스트랩 디테일을 통해 그날의 스타일과 분위기에 따라 다양한 무드로 연출할 수 있습니다. 체인 스트랩, 밍크 스트랩 등 추가 스트랩 액세서리를 통해 다양한 스타일로 변주할 수 있습니다. 하나의 슈즈로 자신만의 감각을 자유롭게 표현해보세요.</p>
+      <p class="feature-tag">Hidden Comfort</p>
+      <p class="feature-copy">보이지 않는 지지력 겉으로는 우아한 플랫의 형태를 유지하지만, 내부에는 야토만의 미세한 히든 힐과 고밀도 쿠셔닝이 숨겨져 있습니다. 하루 종일 이어지는 미팅과 이동 업무 속에서도 피로감을 최소화하며, 영한 감각의 굽이 없는 트렌디한 플랫슈즈 이미지까지, 신는 사람의 니즈에 맞게 세심한 설계를 담았습니다.</p>
     </div>
     </div>
   </section>
+
+  <img class="lifestyle-photo reveal" src="images/arin_black_style.jpg" alt="아린 블랙 플랫슈즈 스타일링 컷">
 
   <div class="designed-for reveal">
     <div class="designed-for-inner">
       <p class="designed-for-title">DESIGNED FOR</p>
       <p class="designed-for-copy">
-        매일의 출근길, 작은 변화로 기분을 전환하고 싶은 분.<br>
-        오래 걷는 날에도 편안함과 스타일을 모두 놓치고 싶지 않은 분.<br>
-        과하게 꾸미지 않아도 한층 선명한 인상을 완성하고 싶은 분.<br>
-        슈즈로 전체적인 인상을 슬림하고 또렷하게 완성하고 싶은 분.
+        매일의 출근길, 작은 변화로 기분을 전환하고 싶은 분<br>
+        오래 걷는 날에도 편안함과 스타일을 놓치고 싶지 않은 날<br>
+        활동량이 많은 하루지만, 언제나 단정한 모습을 지키고 싶은 분<br>
+        평범한 룩에 한 끗의 '로맨틱한 변주'를 주고 싶은 특별한 오후<br>
+        발등이 높아 슬링백이 자꾸 벗겨져 불편했던 분
       </p>
+      <p class="styling-tip-title">STYLING TIP: Romantic Mix &amp; Match</p>
+      <p class="styling-tip-copy"><span class="styling-tip-label">[Tip 1. Parisian Chic]</span> 무심하게 툭 떨어진 데님 팬츠 밑단 아래로 메리제인의 앞코와 스트랩이 살짝 보이게 연출해 보세요. 프랑스 여인들이 즐겨 입는 '에포트리스 로맨틱' 룩이 완성됩니다.</p>
+      <p class="styling-tip-copy"><span class="styling-tip-label">[Tip 2. Graphic Play]</span> 메리제인은 양말과의 조합이 가장 즐거운 슈즈입니다. 투박한 화이트 코튼 삭스를 매치하면 빈티지한 무드를, 시스루 소재의 패턴 양말을 매치하면 갤러리 룩 같은 예술적인 분위기를 자아냅니다.</p>
     </div>
   </div>
-
-  <img class="lifestyle-photo reveal" src="images/arin_black_style.jpg" alt="아린 블랙 플랫슈즈 스타일링 컷">
 
   <div class="details-label">
     <div class="section-title reveal" style="font-size:16px;">DETAILS</div>
