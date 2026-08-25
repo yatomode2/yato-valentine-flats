@@ -19,6 +19,15 @@
     --kr: 'Noto Sans KR', sans-serif;
   }
 
+  /* Standalone preview only (GitHub Pages / local). Does not apply when pasted into a mall page. */
+  html:has(> body > .yato-detail),
+  html:has(> body > .yato-detail) body{
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color-scheme: light;
+  }
+
   .yato-detail, .yato-detail *{box-sizing:border-box;}
 
   
