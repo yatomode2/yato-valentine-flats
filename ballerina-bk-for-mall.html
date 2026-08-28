@@ -6,6 +6,16 @@
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
 
 <style>
+
+/* Standalone preview only (GitHub Pages / local). Does not apply when pasted into a mall page. */
+html:has(> body > .yato-detail),
+html:has(> body > .yato-detail) body{
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color-scheme: light;
+}
+
 :root{
     --ink:#1c1b19;
     --stone:#f4f2ec;
@@ -19,9 +29,7 @@
     --kr: 'Noto Sans KR', sans-serif;
   }
 
-  .yato-detail, .yato-detail *{box-sizing:border-box;}
-
-  
+  .yato-detail, .yato-detail *{box-sizing:border-box !important;}
 
   .yato-detail{
     font-family: var(--kr);
@@ -29,11 +37,15 @@
     background: var(--white);
     -webkit-font-smoothing:antialiased;
     text-align: left;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
   }
 
   .yato-detail .page{
-    max-width: 560px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
     background: var(--white);
     overflow:hidden;
   }
@@ -261,16 +273,23 @@
 
   /* ---------- REVIEW EVENT ---------- */
   .review-event{
-    margin: 54px 75px 10px;
-    padding: 42px 22px 36px;
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 48px 16px 28px !important;
+    padding: 36px 22px 32px !important;
     border: 1px solid #cfcfcf;
     background: var(--white);
     text-align: center;
+    box-sizing: border-box !important;
   }
   .review-event-symbol{
     width: 32px !important;
-    height: auto;
-    margin: 0 auto 18px;
+    max-width: 32px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 18px !important;
     opacity: 0.8;
   }
   .review-event-title{
@@ -659,16 +678,16 @@
   <img class="detail-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/ballerina_black_details.jpg" alt="발레리나 블랙 플랫슈즈 디테일">
 
   <!-- ============ BALLERINA SIZE TIP ============ -->
-  <section class="review-event reveal">
+  <div class="review-event reveal">
     <img class="review-event-symbol" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_symbol.png" alt="YATO">
-    <p class="review-event-title">“ BALLERINA SIZE TIP ”</p>
+    <p class="review-event-title">" BALLERINA SIZE TIP "</p>
     <div class="review-event-body">
       <p class="review-event-copy">YATO의 발레리나 플랫은 발목과 발등이 슬림해 보이도록 깊은 U컷으로 디자인되었으며, 전체적으로 여유 있게 나온 편입니다.</p>
       <p class="review-event-copy">발등이 낮거나 발에 살이 없는 분, 두 사이즈 사이에서 고민하시는 분께는 작은 사이즈를 권장드립니다. 양말과 함께 스타일링하거나 편안하고 여유로운 착화감을 선호하시는 분은 평소 사이즈를 선택해 주세요.</p>
       <p class="review-event-example-label">Example.</p>
-      <p class="review-event-example">235–240 사이즈를 함께 착용하시는 경우<br>36.5 ( 235mm ) 구매 추천합니다.</p>
+      <p class="review-event-example">235~240 사이즈를 함께 착용하시는 경우<br>36.5 ( 235mm ) 구매 추천합니다.</p>
     </div>
-  </section>
+  </div>
 
   <!-- ============ VALUE ============ -->
   <section class="value-section">
