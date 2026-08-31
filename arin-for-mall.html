@@ -47,7 +47,7 @@
     overflow:hidden;
   }
 
-  .yato-detail  img{display:block; width:100%; height:auto;}
+  .yato-detail img:not(.brand-logo){display:block; width:100%; height:auto;}
 
   /* ---------- reveal on scroll ---------- */
   .yato-detail .reveal{
@@ -435,15 +435,17 @@
     color:#9a968c;
   }
 
-  footer.brand-foot{
-    text-align:center;
-    padding: 44px 0 56px;
+  .yato-detail footer.brand-foot{
+    text-align:center !important;
+    padding: 44px 0 56px !important;
   }
-  footer.brand-foot .brand-logo{
-    display: block;
-    width: 115px;
-    height: auto;
-    margin: 0 auto;
+  .yato-detail footer.brand-foot .brand-logo,
+  .yato-detail img.brand-logo{
+    display: block !important;
+    width: 115px !important;
+    max-width: 115px !important;
+    height: auto !important;
+    margin: 0 auto !important;
     opacity: 0.7;
   }
 
@@ -687,7 +689,7 @@
   </section>
 
   <footer class="brand-foot">
-    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO">
+    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO" width="115" style="display:block!important;width:115px!important;max-width:115px!important;height:auto!important;margin:0 auto!important;">
   </footer>
 
 </div>
