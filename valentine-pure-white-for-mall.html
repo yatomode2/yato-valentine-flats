@@ -49,7 +49,7 @@ html:has(> body > .yato-detail) body{
     overflow:hidden;
   }
 
-  .yato-detail  img{display:block; width:100%; height:auto;}
+  .yato-detail img:not(.brand-logo){display:block; width:100%; height:auto;}
 
   /* ---------- reveal on scroll ---------- */
   .yato-detail .reveal{
@@ -217,9 +217,64 @@ html:has(> body > .yato-detail) body{
   .lifestyle-photo{ width:100%; }
   .detail-photo{ width:100%; }
 
-  .details-label{
+  .yato-detail .image-note{
+    display: block;
+    padding: 18px 30px 8px;
+    background: var(--white);
+    font-family: var(--kr);
+    font-size: 12px;
+    line-height: 1.85;
+    letter-spacing: -0.2px;
+    color: #2f2d2a;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+  .yato-detail .details-label{
     padding: 54px 0 30px;
     background: var(--white);
+    text-align: center !important;
+  }
+  .yato-detail .details-label .section-title{
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  .yato-detail .option-block{
+    padding: 8px 30px 36px;
+    background: var(--white);
+    text-align: left !important;
+  }
+  .yato-detail .option-block-01{
+    padding-top: 13px;
+  }
+  .yato-detail .option-block-02{
+    padding-top: 43px;
+    padding-bottom: 37px;
+  }
+  .yato-detail .option-title{
+    display: block;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--ink);
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 0 12px !important;
+  }
+  .yato-detail .option-copy{
+    display: block;
+    font-family: 'Pretendard', var(--kr);
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.85;
+    color: #4a4844;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   /* ---------- REVIEW EVENT ---------- */
@@ -496,15 +551,17 @@ html:has(> body > .yato-detail) body{
     color:#9a968c;
   }
 
-  footer.brand-foot{
-    text-align:center;
-    padding: 44px 0 56px;
+  .yato-detail footer.brand-foot{
+    text-align:center !important;
+    padding: 44px 0 56px !important;
   }
-  footer.brand-foot .brand-logo{
-    display: block;
-    width: 115px;
-    height: auto;
-    margin: 0 auto;
+  .yato-detail footer.brand-foot .brand-logo,
+  .yato-detail img.brand-logo{
+    display: block !important;
+    width: 115px !important;
+    max-width: 115px !important;
+    height: auto !important;
+    margin: 0 auto !important;
     opacity: 0.7;
   }
 
@@ -600,7 +657,7 @@ html:has(> body > .yato-detail) body{
   </div>
 
   <div class="details-label">
-    <div class="section-title reveal" style="font-size:16px;">DETAILS</div>
+    <div class="section-title reveal">DETAILS</div>
   </div>
 
   <div class="option-block option-block-01">
@@ -610,7 +667,7 @@ html:has(> body > .yato-detail) body{
   <img class="detail-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_pure_white_details.jpg" alt="발렌타인 퓨어 화이트 디테일">
 
   <div class="option-block option-block-02">
-    <p class="option-title reveal">Option 02. VALENTINE ORIGINAL + STRAP (+ 40,000 won)</p>
+    <p class="option-title reveal">Option 02. VALENTINE ORIGINAL + STRAP<br>(+ 40,000 won)</p>
     <p class="option-copy reveal">꾸준히 베스트 셀러, 발렌타인 클래식 블랙의 화이트 버전 디자인입니다. 발등에 가느다란 스트랩 디테일을 추가해 고정력과 스타일의 완성도를 더해 주어 색다른 무드로 연출할 수 있습니다. 1.5cm의 낮은 굽의 로우 플랫이지만 흐트러짐 없는 실루엣의 제품입니다.</p>
   </div>
   <img class="detail-photo reveal" src="https://yatomode2.github.io/yato-valentine-flats/images/valentine_white_details.jpg" alt="발렌타인 화이트 스트랩 옵션 디테일">
@@ -754,7 +811,7 @@ html:has(> body > .yato-detail) body{
   </section>
 
   <footer class="brand-foot">
-    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO">
+    <img class="brand-logo" src="https://yatomode2.github.io/yato-valentine-flats/images/yato_logo.png" alt="YATO" width="115" style="display:block!important;width:115px!important;max-width:115px!important;height:auto!important;margin:0 auto!important;">
   </footer>
 
 
